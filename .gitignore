@@ -1,0 +1,10 @@
+################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+*.suo
+*.user
+.gitignore.bak
+raml-csharp-parser/raml-csharp-parser/obj/
+raml-csharp-parser/raml-csharp-parser/bin/
+raml-csharp-parser/raml-parser/obj/

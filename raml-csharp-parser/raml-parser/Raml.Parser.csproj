@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{79F3DD5D-3BDA-457B-9A7D-0891FCDBF19B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Raml.Parser</RootNamespace>
+    <AssemblyName>Raml.Parser</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Raml\Emitter\RamlEmitter.cs" />
+    <Compile Include="Raml\Model\Action.cs" />
+    <Compile Include="Raml\Model\ActionType.cs" />
+    <Compile Include="Raml\Model\DocumentationItem.cs" />
+    <Compile Include="Raml\Model\MimeType.cs" />
+    <Compile Include="Raml\Model\Parameter\AbstractParam.cs" />
+    <Compile Include="Raml\Model\Parameter\FormParameter.cs" />
+    <Compile Include="Raml\Model\Parameter\Header.cs" />
+    <Compile Include="Raml\Model\Parameter\QueryParameter.cs" />
+    <Compile Include="Raml\Model\Parameter\UriParameter.cs" />
+    <Compile Include="Raml\Model\ParamType.cs" />
+    <Compile Include="Raml\Model\Protocol.cs" />
+    <Compile Include="Raml\Model\Raml.cs" />
+    <Compile Include="Raml\Model\Resource.cs" />
+    <Compile Include="Raml\Model\Response.cs" />
+    <Compile Include="Raml\Model\SecurityReference.cs" />
+    <Compile Include="Raml\Model\SecuritySchema.cs" />
+    <Compile Include="Raml\Model\SecuritySchemaDescription.cs" />
+    <Compile Include="Raml\Model\SecuritySettings.cs" />
+    <Compile Include="Raml\Model\Template.cs" />
+    <Compile Include="Raml\Parser\Annotation\Key.cs" />
+    <Compile Include="Raml\Parser\Annotation\Mapping.cs" />
+    <Compile Include="Raml\Parser\Annotation\Parent.cs" />
+    <Compile Include="Raml\Parser\Annotation\Scalar.cs" />
+    <Compile Include="Raml\Parser\Annotation\Sequence.cs" />
+    <Compile Include="Raml\Parser\Annotation\Value.cs" />
+    <Compile Include="Raml\Parser\Builder\AbstractFactory.cs" />
+    <Compile Include="Raml\Parser\Builder\DefaultTupleBuilder.cs" />
+    <Compile Include="Raml\Parser\Builder\ImplicitMapEntryBuilder.cs" />
+    <Compile Include="Raml\Parser\Builder\MapTupleBuilder.cs" />
+    <Compile Include="Raml\Parser\Builder\MapWithListValueTupleBuilder.cs" />
+    <Compile Include="Raml\Parser\Builder\NodeBuilder.cs" />
+    <Compile Include="Raml\Parser\Builder\PojoTupleBuilder.cs" />
+    <Compile Include="Raml\Parser\Builder\ResourceTypeBuilder.cs" />
+    <Compile Include="Raml\Parser\Builder\ScalarTupleBuilder.cs" />
+    <Compile Include="Raml\Parser\Builder\SequenceBuilder.cs" />
+    <Compile Include="Raml\Parser\Builder\SequenceTupleBuilder.cs" />
+    <Compile Include="Raml\Parser\Builder\TemplateBuilder.cs" />
+    <Compile Include="Raml\Parser\Builder\TraitBuilder.cs" />
+    <Compile Include="Raml\Parser\Builder\TupleBuilder.cs" />
+    <Compile Include="Raml\Parser\Builder\TupleBuilderFactory.cs" />
+    <Compile Include="Raml\Parser\Completion\DefaultSuggestion.cs" />
+    <Compile Include="Raml\Parser\Completion\KeySuggestion.cs" />
+    <Compile Include="Raml\Parser\Completion\NodeContext.cs" />
+    <Compile Include="Raml\Parser\Completion\Suggestion.cs" />
+    <Compile Include="Raml\Parser\Loader\ClassPathResourceLoader.cs" />
+    <Compile Include="Raml\Parser\Loader\CompositeResourceLoader.cs" />
+    <Compile Include="Raml\Parser\Loader\DefaultResourceLoader.cs" />
+    <Compile Include="Raml\Parser\Loader\FileResourceLoader.cs" />
+    <Compile Include="Raml\Parser\Loader\ResourceLoader.cs" />
+    <Compile Include="Raml\Parser\Loader\UrlResourceLoader.cs" />
+    <Compile Include="Raml\Parser\Resolver\DefaultScalarTupleHandler.cs" />
+    <Compile Include="Raml\Parser\Resolver\DefaultTupleHandler.cs" />
+    <Compile Include="Raml\Parser\Resolver\EnumHandler.cs" />
+    <Compile Include="Raml\Parser\Resolver\MatchAllHandler.cs" />
+    <Compile Include="Raml\Parser\Resolver\MimeTypeHandler.cs" />
+    <Compile Include="Raml\Parser\Resolver\ResourceHandler.cs" />
+    <Compile Include="Raml\Parser\Resolver\ResponseHandler.cs" />
+    <Compile Include="Raml\Parser\Resolver\TupleHandler.cs" />
+    <Compile Include="Raml\Parser\Rule\BaseUriRule.cs" />
+    <Compile Include="Raml\Parser\Rule\ContributionTupleRule.cs" />
+    <Compile Include="Raml\Parser\Rule\DefaultTupleRule.cs" />
+    <Compile Include="Raml\Parser\Rule\EnumModifierRule.cs" />
+    <Compile Include="Raml\Parser\Rule\GlobalSchemasRule.cs" />
+    <Compile Include="Raml\Parser\Rule\ImplicitMapEntryRule.cs" />
+    <Compile Include="Raml\Parser\Rule\MapTupleRule.cs" />
+    <Compile Include="Raml\Parser\Rule\MapWithListValueTupleRule.cs" />
+    <Compile Include="Raml\Parser\Rule\NodeRule.cs" />
+    <Compile Include="Raml\Parser\Rule\NodeRuleFactory.cs" />
+    <Compile Include="Raml\Parser\Rule\NodeRuleFactoryExtension.cs" />
+    <Compile Include="Raml\Parser\Rule\ParamRule.cs" />
+    <Compile Include="Raml\Parser\Rule\PojoTupleRule.cs" />
+    <Compile Include="Raml\Parser\Rule\SchemaRule.cs" />
+    <Compile Include="Raml\Parser\Rule\SecurityReferenceRule.cs" />
+    <Compile Include="Raml\Parser\Rule\SecurityReferenceSequenceRule.cs" />
+    <Compile Include="Raml\Parser\Rule\SequenceRule.cs" />
+    <Compile Include="Raml\Parser\Rule\SequenceTupleNullsAllowedRule.cs" />
+    <Compile Include="Raml\Parser\Rule\SequenceTupleRule.cs" />
+    <Compile Include="Raml\Parser\Rule\SimpleNullAllowedRule.cs" />
+    <Compile Include="Raml\Parser\Rule\SimpleRule.cs" />
+    <Compile Include="Raml\Parser\Rule\TupleRule.cs" />
+    <Compile Include="Raml\Parser\Rule\TypedTupleRule.cs" />
+    <Compile Include="Raml\Parser\Rule\UnknownTupleRule.cs" />
+    <Compile Include="Raml\Parser\Rule\UriParametersRule.cs" />
+    <Compile Include="Raml\Parser\Rule\ValidationMessage.cs" />
+    <Compile Include="Raml\Parser\Rule\ValidationResult.cs" />
+    <Compile Include="Raml\Parser\TagResolver\ContextPath.cs" />
+    <Compile Include="Raml\Parser\TagResolver\ContextPathAware.cs" />
+    <Compile Include="Raml\Parser\TagResolver\IncludeResolver.cs" />
+    <Compile Include="Raml\Parser\TagResolver\JacksonTagResolver.cs" />
+    <Compile Include="Raml\Parser\TagResolver\JaxbTagResolver.cs" />
+    <Compile Include="Raml\Parser\TagResolver\PojoValidatorTagResolver.cs" />
+    <Compile Include="Raml\Parser\TagResolver\TagResolver.cs" />
+    <Compile Include="Raml\Parser\Utils\BooleanConverter.cs" />
+    <Compile Include="Raml\Parser\Utils\ConvertUtils.cs" />
+    <Compile Include="Raml\Parser\Utils\Inflector.cs" />
+    <Compile Include="Raml\Parser\Utils\NodeUtils.cs" />
+    <Compile Include="Raml\Parser\Utils\ReflectionUtils.cs" />
+    <Compile Include="Raml\Parser\Utils\StreamUtils.cs" />
+    <Compile Include="Raml\Parser\Visitor\ErrorMessage.cs" />
+    <Compile Include="Raml\Parser\Visitor\IncludeInfo.cs" />
+    <Compile Include="Raml\Parser\Visitor\MediaTypeResolver.cs" />
+    <Compile Include="Raml\Parser\Visitor\NodeHandler.cs" />
+    <Compile Include="Raml\Parser\Visitor\NodeVisitor.cs" />
+    <Compile Include="Raml\Parser\Visitor\RamlDocumentBuilder.cs" />
+    <Compile Include="Raml\Parser\Visitor\RamlDocumentValidator.cs" />
+    <Compile Include="Raml\Parser\Visitor\RamlValidationService.cs" />
+    <Compile Include="Raml\Parser\Visitor\TemplateResolver.cs" />
+    <Compile Include="Raml\Parser\Visitor\TupleType.cs" />
+    <Compile Include="Raml\Parser\Visitor\YamlDocumentBuilder.cs" />
+    <Compile Include="Raml\Parser\Visitor\YamlDocumentSuggester.cs" />
+    <Compile Include="Raml\Parser\Visitor\YamlDocumentValidator.cs" />
+    <Compile Include="Raml\Parser\Visitor\YamlValidationService.cs" />
+    <Compile Include="Raml\Parser\Visitor\YamlValidator.cs" />
+    <Compile Include="Raml\Validator.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
