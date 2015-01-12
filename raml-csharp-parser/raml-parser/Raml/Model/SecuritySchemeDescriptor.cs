@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Raml.Parser.Raml.Model
 {
-    class SecuritySchemaDescription
+    public class SecuritySchemeDescriptor
     {
     }
 }

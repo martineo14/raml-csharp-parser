@@ -22,26 +22,20 @@ using System.Threading.Tasks;
 namespace Raml.Parser.Raml.Model
 {
     [Serializable]
-    public class SecuritySettings
+    public class SecurityScheme
     {
 
     //@Scalar
-    public string requestTokenUri {get;set;}
+    public string description {get;set;}
 
     //@Scalar
-    public string authorizationUri { get; set; }
+    public string type {get;set;}
 
     //@Scalar
-    public string tokenCredentialsUri { get; set; }
+    public SecuritySchemeDescriptor describedBy {get;set;}
 
     //@Scalar
-    public string accessTokenUri { get; set; }
-
-    //@Sequence
-    private List<String> authorizationGrants { get; set; }
-
-    //@Sequence
-    private List<String> scopes { get; set; }
+    public SecuritySettings settings { get; set; }
 
     }
 }

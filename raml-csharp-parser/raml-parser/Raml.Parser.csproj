@@ -57,8 +57,8 @@
     <Compile Include="Raml\Model\Resource.cs" />
     <Compile Include="Raml\Model\Response.cs" />
     <Compile Include="Raml\Model\SecurityReference.cs" />
-    <Compile Include="Raml\Model\SecuritySchema.cs" />
-    <Compile Include="Raml\Model\SecuritySchemaDescription.cs" />
+    <Compile Include="Raml\Model\SecurityScheme.cs" />
+    <Compile Include="Raml\Model\SecuritySchemeDescriptor.cs" />
     <Compile Include="Raml\Model\SecuritySettings.cs" />
     <Compile Include="Raml\Model\Template.cs" />
     <Compile Include="Raml\Parser\Annotation\Key.cs" />
