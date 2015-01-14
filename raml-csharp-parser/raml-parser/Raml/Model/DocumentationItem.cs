@@ -25,7 +25,6 @@ namespace Raml.Parser.Raml.Model
     [Serializable]
     public class DocumentationItem
     {
-    private static readonly long serialVersionUID = 8041314633068025129L;
 
     [Required()]
     public string Title{get;set;}
