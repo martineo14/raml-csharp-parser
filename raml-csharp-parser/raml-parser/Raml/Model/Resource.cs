@@ -18,10 +18,104 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Raml.Parser.Raml.Model.Parameter;
 
 namespace Raml.Parser.Raml.Model
 {
+    [Serializable]
     public class Resource
     {
+
+        //@Parent
+        public Resource parentResource { get; set; }
+
+        //@Scalar
+        public string displayName { get; set; }
+
+        //@Scalar
+        public string description { get; set; }
+
+        //@Parent(property = "uri")
+        public string parentUri { get; set; }
+
+        //@Key
+        public string relativeUri { get; set; }
+
+        //@Mapping
+        public Dictionary<String, UriParameter> uriParameters { get; set; }
+
+        //@Scalar
+        public string type { get; set; }
+
+        //@Sequence
+        public List<String> resourceis { get; set; }
+
+        //@Sequence(rule = SecurityReferenceSequenceRule.class)
+        public List<SecurityReference> securedBy { get; set; }
+
+        //@Mapping(rule = org.raml.parser.rule.UriParametersRule.class)
+        public Dictionary<String, List<UriParameter>> baseUriParameters { get; set; }
+
+        //@Mapping(implicit = true)
+        public Dictionary<ActionType, Action> actions { get; set; }
+
+        //@Mapping(handler = ResourceHandler.class, implicit = true)
+        public Dictionary<String, Resource> resources { get; set; }
+
+        public Resource()
+        {
+        }
+
+        ////@Override
+        //public bool equals(Object o)
+        //{
+        //    if (this == o)
+        //    {
+        //        return true;
+        //    }
+        //    if (!(o instanceof Resource))
+        //    {
+        //        return false;
+        //    }
+
+        //    Resource resource = (Resource) o;
+
+        //    return parentUri.equals(resource.parentUri) && relativeUri.equals(resource.relativeUri);
+
+        //}
+
+        ////@Override
+        //public int hashCode()
+        //{
+        //    int result = parentUri.hashCode();
+        //    result = 31 * result + relativeUri.hashCode();
+        //    return result;
+        //}
+
+        ////@Override
+        //public String toString()
+        //{
+        //    return "Resource{displayName='" + displayName + '\'' +
+        //           ", uri='" + (parentUri != null ? getUri() : "-") + "'}";
+        //}
+
+        //public Resource getResource(String path)
+        //{
+        //    for (Resource resource : resources.values())
+        //    {
+        //        if (path.startsWith(resource.getRelativeUri()))
+        //        {
+        //            if (path.length() == resource.getRelativeUri().length())
+        //            {
+        //                return resource;
+        //            }
+        //            if (path.charAt(resource.getRelativeUri().length()) == '/')
+        //            {
+        //                return resource.getResource(path.substring(resource.getRelativeUri().length()));
+        //            }
+        //        }
+        //    }
+        //    return null;
+        //}
     }
 }
