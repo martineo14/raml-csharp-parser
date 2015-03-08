@@ -18,6 +18,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.RegularExpressions;
+using Raml.Parser.Raml.Model;
 
 namespace raml_parser.raml.emitter
 {
@@ -31,10 +33,10 @@ namespace raml_parser.raml.emitter
     private static readonly String YAML_SEQ_SEP = ", ";
     private static readonly String YAML_MAP_SEP = ": ";
 
-    //private static readonly Pattern NO_QUOTES = Pattern.compile("^[a-zA-Z_/+][^:]*$");
-    //private static readonly String[] LITERALS = {"yes", "no", "true", "false", "on", "off", "null"};
+    private static readonly Regex NO_QUOTES = new Regex(@"^[a-zA-Z_/+][^:]*$");
+    private static readonly string[] LITERALS = {"yes", "no", "true", "false", "on", "off", "null"};
 
-    //public String dump(Raml raml)
+    //public string dump(Raml.Parser.Raml.Model.Raml raml)
     //{
     //    StringBuilder dump = new StringBuilder(VERSION);
     //    dump.append("\n");
