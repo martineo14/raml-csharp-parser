@@ -45,7 +45,7 @@ namespace Raml.Parser.Raml.Model
     {
         this.type = type;
     }
-    public override String toString()
+    public String toString()
     {
         return "MimeType{" +
                "type='" + type + '\'' +

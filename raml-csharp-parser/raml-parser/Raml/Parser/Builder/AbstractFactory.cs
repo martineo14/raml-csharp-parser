@@ -18,40 +18,41 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Raml.Parser.Raml.Parser.Resolver;
 
 namespace Raml.Parser.Raml.Parser.Builder
 {
     public class AbstractFactory
     {
-        protected TupleHandler createHandler(Class<? extends TupleHandler> handler, String alias,
-                                         Class<? extends Node> nodeClass)
-    {
-        TupleHandler tupleHandler = null;
-        if (handler != TupleHandler.class)
-        {
-            tupleHandler = createInstanceOf(handler);
-        }
-        else if (!alias.isEmpty())
-        {
-            tupleHandler = new DefaultScalarTupleHandler(alias);
-        }
-        return tupleHandler;
-    }
+    //    protected TupleHandler createHandler(Class<? extends TupleHandler> handler, String alias,
+    //                                     Class<? extends Node> nodeClass)
+    //{
+    //    TupleHandler tupleHandler = null;
+    //    if (handler != TupleHandler.class)
+    //    {
+    //        tupleHandler = createInstanceOf(handler);
+    //    }
+    //    else if (!alias.isEmpty())
+    //    {
+    //        tupleHandler = new DefaultScalarTupleHandler(alias);
+    //    }
+    //    return tupleHandler;
+    //}
 
-    protected <T> T createInstanceOf(Class<? extends T> handler)
-    {
-        try
-        {
-            return handler.newInstance();
-        }
-        catch (InstantiationException e)
-        {
-            throw new RuntimeException(e);
-        }
-        catch (IllegalAccessException e)
-        {
-            throw new RuntimeException(e);
-        }
-    }
+    //protected <T> T createInstanceOf(Class<? extends T> handler)
+    //{
+    //    try
+    //    {
+    //        return handler.newInstance();
+    //    }
+    //    catch (InstantiationException e)
+    //    {
+    //        throw new RuntimeException(e);
+    //    }
+    //    catch (IllegalAccessException e)
+    //    {
+    //        throw new RuntimeException(e);
+    //    }
+    //}
     }
 }

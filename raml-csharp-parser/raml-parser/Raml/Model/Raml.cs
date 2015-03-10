@@ -65,7 +65,7 @@ namespace Raml.Parser.Raml.Model
         //@Sequence
         public List<DocumentationItem> documentation { get; set; }
 
-        public Raml()
+        public Ralm()
         {
         }
 
