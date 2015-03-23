@@ -26,16 +26,16 @@ namespace Raml.Parser.Raml.Model
     {
 
     //@Scalar
-    public string description {get;set;}
+    public string Description {get;set;}
 
     //@Scalar
-    public string type {get;set;}
+    public string Type {get;set;}
 
     //@Scalar
-    public SecuritySchemeDescriptor describedBy {get;set;}
+    public SecuritySchemeDescriptor DescribedBy {get;set;}
 
     //@Scalar
-    public SecuritySettings settings { get; set; }
+    public SecuritySettings Settings { get; set; }
 
     }
 }

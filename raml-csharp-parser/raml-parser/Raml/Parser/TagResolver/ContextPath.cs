@@ -24,7 +24,7 @@ namespace Raml.Parser.Raml.Parser.TagResolver
 {
     public class ContextPath
     {
-        private Queue<IncludeInfo> includeStack = new Queue<IncludeInfo>();
+        private Queue<IncludeInfo> _includeStack = new Queue<IncludeInfo>();
 
         public ContextPath()
         {
@@ -32,16 +32,16 @@ namespace Raml.Parser.Raml.Parser.TagResolver
 
         public ContextPath(ContextPath contextPath)
         {
-            this.includeStack = new Queue<IncludeInfo>(contextPath.includeStack);
+            this._includeStack = new Queue<IncludeInfo>(contextPath._includeStack);
         }
 
-        public void pushRoot(String absoluteFile)
+        public void PushRoot(String absoluteFile)
         {
-            if (includeStack.Count > 0)
+            if (_includeStack.Count > 0)
             {
                 throw new System.InvalidOperationException("Non empty stack");
             }
-            includeStack.Enqueue(new IncludeInfo(absoluteFile));
+            _includeStack.Enqueue(new IncludeInfo(absoluteFile));
         }
 
         public static String resolveAbsolutePath(string relativeFile, string parentPath)
@@ -62,23 +62,23 @@ namespace Raml.Parser.Raml.Parser.TagResolver
 
         public String resolveAbsolutePath(String relativeFile)
         {
-            return resolveAbsolutePath(relativeFile, getPartentPath());
+            return resolveAbsolutePath(relativeFile, GetPartentPath());
         }
 
-        private String getPartentPath()
+        private String GetPartentPath()
         {
-            int idx = includeStack.Peek().IncludeName.LastIndexOf("/") + 1;
-            return includeStack.Peek().IncludeName.Substring(0, idx);
+            int idx = _includeStack.Peek().IncludeName.LastIndexOf("/") + 1;
+            return _includeStack.Peek().IncludeName.Substring(0, idx);
         }
 
-        public IncludeInfo peek()
+        public IncludeInfo Peek()
         {
-            return includeStack.Peek();
+            return _includeStack.Peek();
         }
 
-        public IncludeInfo pop()
+        public IncludeInfo Pop()
         {
-            return includeStack.Dequeue();
+            return _includeStack.Dequeue();
         }
 
         //public void push(IncludeInfo includeInfo)
@@ -96,9 +96,9 @@ namespace Raml.Parser.Raml.Parser.TagResolver
         //    push(new IncludeInfo(tag));
         //}
 
-        public int size()
+        public int Size()
         {
-            return includeStack.Count();
+            return _includeStack.Count();
         }
     }
 }

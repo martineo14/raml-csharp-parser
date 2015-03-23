@@ -26,22 +26,22 @@ namespace Raml.Parser.Raml.Model
     {
 
     //@Scalar
-    public string requestTokenUri {get;set;}
+    public string RequestTokenUri {get;set;}
 
     //@Scalar
-    public string authorizationUri { get; set; }
+    public string AuthorizationUri { get; set; }
 
     //@Scalar
-    public string tokenCredentialsUri { get; set; }
+    public string TokenCredentialsUri { get; set; }
 
     //@Scalar
-    public string accessTokenUri { get; set; }
+    public string AccessTokenUri { get; set; }
 
     //@Sequence
-    private List<String> authorizationGrants { get; set; }
+    private List<String> AuthorizationGrants { get; set; }
 
     //@Sequence
-    private List<String> scopes { get; set; }
+    private List<String> Scopes { get; set; }
 
     }
 }

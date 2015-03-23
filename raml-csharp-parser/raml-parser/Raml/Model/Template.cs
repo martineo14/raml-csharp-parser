@@ -26,7 +26,7 @@ namespace Raml.Parser.Raml.Model
     {
 
         //@Scalar
-        public string displayName { get; set; }
+        public string DisplayName { get; set; }
 
     }
 }

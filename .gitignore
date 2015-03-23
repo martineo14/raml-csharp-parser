@@ -4,7 +4,9 @@
 
 *.suo
 *.user
-.gitignore.bak
 raml-csharp-parser/raml-csharp-parser/obj/
 raml-csharp-parser/raml-csharp-parser/bin/
 raml-csharp-parser/raml-parser/obj/
+raml-csharp-parser/raml-parser/bin/
+packages/
+*.nupkg

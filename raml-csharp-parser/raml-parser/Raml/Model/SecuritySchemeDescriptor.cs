@@ -27,13 +27,13 @@ namespace Raml.Parser.Raml.Model
     {
 
     //@Mapping
-    public Dictionary<String, Header> headers {get;set;}
+    public Dictionary<String, Header> Headers {get;set;}
 
     //@Mapping
-    public Dictionary<String, QueryParameter> queryParameters {get;set;}
+    public Dictionary<String, QueryParameter> QueryParameters {get;set;}
 
     //@Mapping
-    public Dictionary<String, Response> responses { get; set; }
+    public Dictionary<String, Response> Responses { get; set; }
 
     }
 }

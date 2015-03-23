@@ -23,7 +23,7 @@ namespace Raml.Parser.Raml.Parser.Annotation
 {
     public class Scalar : System.Attribute
     {
-        bool required;
+        bool _required;
 
 
     //Class< extends TupleRule> rule() default TupleRule.class;
@@ -32,7 +32,7 @@ namespace Raml.Parser.Raml.Parser.Annotation
 
     //Class<? extends TupleHandler> handler() default TupleHandler.class;
 
-    String alias;
+    String _alias;
 
     }
 }

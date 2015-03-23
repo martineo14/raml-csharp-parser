@@ -27,37 +27,37 @@ namespace Raml.Parser.Raml.Model
     {
 
         //@Key
-        public ActionType type { get; set; }
+        public ActionType Type { get; set; }
 
         //@Scalar
-        private String description { get; set; }
+        private String Description { get; set; }
 
         //@Mapping
-        private Dictionary<String, Header> headers { get; set; }
+        private Dictionary<String, Header> Headers { get; set; }
 
         //@Mapping
-        private Dictionary<String, QueryParameter> queryParameters { get; set; }
+        private Dictionary<String, QueryParameter> QueryParameters { get; set; }
 
         //@Mapping(innerHandler = MimeTypeHandler.class)
-        private Dictionary<String, MimeType> body { get; set; }
+        private Dictionary<String, MimeType> Body { get; set; }
 
         //@Mapping(innerHandler = ResponseHandler.class)
-        private Dictionary<String, Response> responses { get; set; }
+        private Dictionary<String, Response> Responses { get; set; }
 
         //@Parent
-        private Resource resource { get; set; }
+        private Resource Resource { get; set; }
 
         //@Sequence
-        private List<String> ais { get; set; }
+        private List<String> Ais { get; set; }
 
         //@Sequence
-        private List<Protocol> protocols { get; set; }
+        private List<Protocol> Protocols { get; set; }
 
         //@Sequence(rule = SecurityReferenceSequenceRule.class)
-        private List<SecurityReference> securedBy { get; set; }
+        private List<SecurityReference> SecuredBy { get; set; }
 
         //@Mapping(rule = org.raml.parser.rule.UriParametersRule.class)
-        private Dictionary<String, List<UriParameter>> baseUriParameters { get; set; }
+        private Dictionary<String, List<UriParameter>> BaseUriParameters { get; set; }
 
         public Action()
         {

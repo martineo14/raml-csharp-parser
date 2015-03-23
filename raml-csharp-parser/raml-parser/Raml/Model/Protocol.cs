@@ -23,7 +23,7 @@ namespace Raml.Parser.Raml.Model
 {
     public enum Protocol
     {
-        HTTP, 
-        HTTPS
+        Http, 
+        Https
     }
 }

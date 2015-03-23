@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Raml.Parser.Raml.Parser.Visitor
 {
-    class YamlDocumentValidator
+    public class YamlDocumentValidator
     {
     }
 }

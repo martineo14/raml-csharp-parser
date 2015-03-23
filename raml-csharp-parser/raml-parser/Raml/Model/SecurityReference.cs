@@ -25,14 +25,14 @@ namespace Raml.Parser.Raml.Model
     public class SecurityReference
     {
 
-        public string name { get; set; }
+        public string Name { get; set; }
 
         //@Mapping(handler = MatchAllHandler.class)
-        public Dictionary<String, List<String>> parameters { get; set; }
+        public Dictionary<String, List<String>> Parameters { get; set; }
 
         public SecurityReference(string name)
         {
-            this.name = name;
+            this.Name = name;
         }
     }
 }

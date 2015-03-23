@@ -27,45 +27,45 @@ namespace Raml.Parser.Raml.Model
     {
 
         //@Scalar(required = true)
-        public string title { get; set; }
+        public string Title { get; set; }
 
         //@Scalar()
-        public string version { get; set; }
+        public string Version { get; set; }
 
         //@Scalar(rule = org.raml.parser.rule.BaseUriRule.class)
-        public string baseUri { get; set; }
+        public string BaseUri { get; set; }
 
         //@Sequence
-        public List<Protocol> protocols { get; set; }
+        public List<Protocol> Protocols { get; set; }
 
         //@Mapping(rule = org.raml.parser.rule.UriParametersRule.class)
-        public Dictionary<String, UriParameter> baseUriParameters { get; set; }
+        public Dictionary<String, UriParameter> BaseUriParameters { get; set; }
 
         //@Scalar()
-        public string mediaType { get; set; }
+        public string MediaType { get; set; }
 
         //@Sequence(rule = org.raml.parser.rule.GlobalSchemasRule.class)
-        public List<Dictionary<String, String>> schemas { get; set; }
+        public List<Dictionary<String, String>> Schemas { get; set; }
 
         //@Sequence
-        public List<Dictionary<String, Template>> resourceTypes { get; set; }
+        public List<Dictionary<String, Template>> ResourceTypes { get; set; }
 
         //@Sequence
-        public List<Dictionary<String, Template>> traits { get; set; }
+        public List<Dictionary<String, Template>> Traits { get; set; }
 
         //@Sequence
-        public List<Dictionary<String, SecurityScheme>> securitySchemes { get; set; }
+        public List<Dictionary<String, SecurityScheme>> SecuritySchemes { get; set; }
 
         //@Sequence(rule = SecurityReferenceSequenceRule.class)
-        public List<SecurityReference> securedBy { get; set; }
+        public List<SecurityReference> SecuredBy { get; set; }
 
         //@Mapping(handler = ResourceHandler.class, implicit = true)
-        public Dictionary<String, Resource> resources { get; set; }
+        public Dictionary<String, Resource> Resources { get; set; }
 
         //@Sequence
-        public List<DocumentationItem> documentation { get; set; }
+        public List<DocumentationItem> Documentation { get; set; }
 
-        public Ralm()
+        public Raml()
         {
         }
 

@@ -21,7 +21,7 @@ using System.Threading.Tasks;
 
 namespace Raml.Parser.Raml.Parser.Rule
 {
-    public interface TupleRule
+    public interface ITupleRule
     {
     //     List<ValidationResult> validateKey(K key);
 
@@ -33,9 +33,9 @@ namespace Raml.Parser.Raml.Parser.Rule
 
     //TupleRule<?, ?> getRootTupleRule();
 
-    String getName();
+    String GetName();
 
-    void setName(String name);
+    void SetName(String name);
 
     //TupleRule<?, ?> getRuleByFieldName(String fieldName);
 

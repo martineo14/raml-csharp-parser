@@ -26,38 +26,38 @@ namespace Raml.Parser.Raml.Model.Parameter
     {
 
     //@Scalar
-    private string displayName;
+    private string _displayName;
 
     //@Scalar
-    private string description;
+    private string _description;
 
     //@Scalar
-    private ParamType type;
+    private ParamType _type;
 
     //@Scalar
-    private bool required;
+    private bool _required;
 
     //@Scalar
-    private bool repeat;
+    private bool _repeat;
 
     //@Sequence(alias = "enum", rule = SequenceTupleNullsAllowedRule.class)
-    private List<string> enumeration;
+    private List<string> _enumeration;
     //@Scalar
-    private string pattern;
+    private string _pattern;
     //@Scalar
-    private int minLength;
+    private int _minLength;
     //@Scalar
-    private int maxLength;
+    private int _maxLength;
     //@Scalar
-    private decimal minimum;
+    private decimal _minimum;
     //@Scalar
-    private decimal maximum;
+    private decimal _maximum;
 
     //@Scalar(alias = "default")
-    private string defaultValue;
+    private string _defaultValue;
 
     //@Scalar
-    private string example;
+    private string _example;
 
     //protected transient readonly Logger logger = LoggerFactory.getLogger(getClass());
 
@@ -68,139 +68,139 @@ namespace Raml.Parser.Raml.Model.Parameter
 
     public AbstractParam(string displayName, ParamType type, bool required)
     {
-        this.displayName = displayName;
-        this.type = type;
-        this.required = required;
+        this._displayName = displayName;
+        this._type = type;
+        this._required = required;
     }
 
-    public void setDisplayName(string displayName)
+    public void SetDisplayName(string displayName)
     {
-        this.displayName = displayName;
+        this._displayName = displayName;
     }
 
-    public void setDescription(string description)
+    public void SetDescription(string description)
     {
-        this.description = description;
+        this._description = description;
     }
 
-    public void setType(ParamType type)
+    public void SetType(ParamType type)
     {
-        this.type = type;
+        this._type = type;
     }
 
-    public void setRequired(bool required)
+    public void SetRequired(bool required)
     {
-        this.required = required;
+        this._required = required;
     }
 
-    public string getDisplayName()
+    public string GetDisplayName()
     {
-        return displayName;
+        return _displayName;
     }
 
-    public string getDescription()
+    public string GetDescription()
     {
-        return description;
+        return _description;
     }
 
     public ParamType getType()
     {
-        return type;
+        return _type;
     }
 
-    public bool isRequired()
+    public bool IsRequired()
     {
-        return required;
+        return _required;
     }
 
-    public bool isRepeat()
+    public bool IsRepeat()
     {
-        return repeat;
+        return _repeat;
     }
 
-    public void setRepeat(bool repeat)
+    public void SetRepeat(bool repeat)
     {
-        this.repeat = repeat;
+        this._repeat = repeat;
     }
 
-    public string getDefaultValue()
+    public string GetDefaultValue()
     {
-        return defaultValue;
+        return _defaultValue;
     }
 
-    public string getExample()
+    public string GetExample()
     {
-        return example;
+        return _example;
     }
 
-    public List<string> getEnumeration()
+    public List<string> GetEnumeration()
     {
-        return enumeration;
+        return _enumeration;
     }
 
-    public void setEnumeration(List<string> enumeration)
+    public void SetEnumeration(List<string> enumeration)
     {
-        this.enumeration = enumeration;
+        this._enumeration = enumeration;
     }
 
-    public string getPattern()
+    public string GetPattern()
     {
-        return pattern;
+        return _pattern;
     }
 
-    public void setPattern(string pattern)
+    public void SetPattern(string pattern)
     {
-        this.pattern = pattern;
+        this._pattern = pattern;
     }
 
-    public int getMinLength()
+    public int GetMinLength()
     {
-        return minLength;
+        return _minLength;
     }
 
-    public void setMinLength(int minLength)
+    public void SetMinLength(int minLength)
     {
-        this.minLength = minLength;
+        this._minLength = minLength;
     }
 
-    public int getMaxLength()
+    public int GetMaxLength()
     {
-        return maxLength;
+        return _maxLength;
     }
 
-    public void setMaxLength(int maxLength)
+    public void SetMaxLength(int maxLength)
     {
-        this.maxLength = maxLength;
+        this._maxLength = maxLength;
     }
 
-    public decimal getMinimum()
+    public decimal GetMinimum()
     {
-        return minimum;
+        return _minimum;
     }
 
-    public void setMinimum(decimal minimum)
+    public void SetMinimum(decimal minimum)
     {
-        this.minimum = minimum;
+        this._minimum = minimum;
     }
 
-    public decimal getMaximum()
+    public decimal GetMaximum()
     {
-        return maximum;
+        return _maximum;
     }
 
-    public void setMaximum(decimal maximum)
+    public void SetMaximum(decimal maximum)
     {
-        this.maximum = maximum;
+        this._maximum = maximum;
     }
 
-    public void setDefaultValue(string defaultValue)
+    public void SetDefaultValue(string defaultValue)
     {
-        this.defaultValue = defaultValue;
+        this._defaultValue = defaultValue;
     }
 
-    public void setExample(string example)
+    public void SetExample(string example)
     {
-        this.example = example;
+        this._example = example;
     }
 
     //public bool validate(string value)

@@ -26,16 +26,16 @@ namespace Raml.Parser.Raml.Model
     {
 
     //@Key
-    public string type {get;set;}
+    public string Type {get;set;}
 
     //@Scalar(rule = org.raml.parser.rule.SchemaRule.class)
-    public string schema {get;set;}
+    public string Schema {get;set;}
 
     //@Scalar
-    public string example {get;set;}
+    public string Example {get;set;}
 
     //@Mapping
-    public Dictionary<String, List<FormParameter>> formParameters {get;set;}
+    public Dictionary<String, List<FormParameter>> FormParameters {get;set;}
 
     public MimeType()
     {
@@ -43,12 +43,12 @@ namespace Raml.Parser.Raml.Model
 
     public MimeType(String type)
     {
-        this.type = type;
+        this.Type = type;
     }
     public String toString()
     {
         return "MimeType{" +
-               "type='" + type + '\'' +
+               "type='" + Type + '\'' +
                '}';
     }
     }

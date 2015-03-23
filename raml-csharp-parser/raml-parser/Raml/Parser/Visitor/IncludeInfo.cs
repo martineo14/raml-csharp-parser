@@ -62,9 +62,9 @@ namespace Raml.Parser.Raml.Parser.Visitor
             this.IncludeName = name;
         }
 
-        private int popTrailingNumber(StringBuilder encodedInclude)
+        private int PopTrailingNumber(StringBuilder encodedInclude)
         {
-            int idx = encodedInclude.ToString().LastIndexOf(IncludeResolver.SEPARATOR);
+            int idx = encodedInclude.ToString().LastIndexOf(IncludeResolver.Separator);
             int result = Int32.Parse(encodedInclude.ToString().Substring(idx + 1));
             encodedInclude.Remove(idx, encodedInclude.Length);
             return result;

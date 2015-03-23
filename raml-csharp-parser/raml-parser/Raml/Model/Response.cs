@@ -27,17 +27,17 @@ namespace Raml.Parser.Raml.Model
     {
 
         //@Scalar
-        public string description { get; set; }
+        public string Description { get; set; }
 
         //@Mapping(innerHandler = MimeTypeHandler.class)
-        public Dictionary<String, MimeType> body { get; set; }
+        public Dictionary<String, MimeType> Body { get; set; }
 
         //@Mapping
-        public Dictionary<String, Header> headers { get; set; }
+        public Dictionary<String, Header> Headers { get; set; }
 
-        public bool hasBody()
+        public bool HasBody()
         {
-            return body != null && !body.Any();
+            return Body != null && !Body.Any();
         }
     }
 }

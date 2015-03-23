@@ -23,13 +23,13 @@ namespace Raml.Parser.Raml.Model
 {
     public enum ActionType
     {
-        GET,
-        POST,
-        PUT,
-        DELETE,
-        HEAD,
-        PATCH,
-        OPTIONS,
-        TRACE
+        Get,
+        Post,
+        Put,
+        Delete,
+        Head,
+        Patch,
+        Options,
+        Trace
     }
 }

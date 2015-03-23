@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Raml.Parser.Raml.Parser.Loader
 {
-    class ResourceLoader
+    public class ResourceLoader
     {
     }
 }

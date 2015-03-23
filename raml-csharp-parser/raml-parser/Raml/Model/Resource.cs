@@ -27,40 +27,40 @@ namespace Raml.Parser.Raml.Model
     {
 
         //@Parent
-        public Resource parentResource { get; set; }
+        public Resource ParentResource { get; set; }
 
         //@Scalar
-        public string displayName { get; set; }
+        public string DisplayName { get; set; }
 
         //@Scalar
-        public string description { get; set; }
+        public string Description { get; set; }
 
         //@Parent(property = "uri")
-        public string parentUri { get; set; }
+        public string ParentUri { get; set; }
 
         //@Key
-        public string relativeUri { get; set; }
+        public string RelativeUri { get; set; }
 
         //@Mapping
-        public Dictionary<String, UriParameter> uriParameters { get; set; }
+        public Dictionary<String, UriParameter> UriParameters { get; set; }
 
         //@Scalar
-        public string type { get; set; }
+        public string Type { get; set; }
 
         //@Sequence
-        public List<String> resourceis { get; set; }
+        public List<String> Resourceis { get; set; }
 
         //@Sequence(rule = SecurityReferenceSequenceRule.class)
-        public List<SecurityReference> securedBy { get; set; }
+        public List<SecurityReference> SecuredBy { get; set; }
 
         //@Mapping(rule = org.raml.parser.rule.UriParametersRule.class)
-        public Dictionary<String, List<UriParameter>> baseUriParameters { get; set; }
+        public Dictionary<String, List<UriParameter>> BaseUriParameters { get; set; }
 
         //@Mapping(implicit = true)
-        public Dictionary<ActionType, Action> actions { get; set; }
+        public Dictionary<ActionType, Action> Actions { get; set; }
 
         //@Mapping(handler = ResourceHandler.class, implicit = true)
-        public Dictionary<String, Resource> resources { get; set; }
+        public Dictionary<String, Resource> Resources { get; set; }
 
         public Resource()
         {

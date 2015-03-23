@@ -26,51 +26,51 @@ namespace Raml.Parser.Raml.Parser.Rule
     {
         public enum Level
         {
-            ERROR,
-            WARN,
-            INFO
+            Error,
+            Warn,
+            Info
         }
 
-        public static readonly int UNKNOWN = -1;
-        private readonly int endColumn;
+        public static readonly int Unknown = -1;
+        private readonly int _endColumn;
         public readonly Level level;
-        public readonly int line;
-        public readonly String message;
-        private readonly int startColumn;
-        private ContextPath contextPath;
-        private IncludeInfo extraIncludeInfo;
+        public readonly int Line;
+        public readonly String Message;
+        private readonly int _startColumn;
+        private ContextPath _contextPath;
+        private IncludeInfo _extraIncludeInfo;
 
         private ValidationResult(Level level, String message, int line, int startColumn, int endColumn)
         {
             this.level = level;
-            this.message = message;
-            this.line = line;
-            this.startColumn = startColumn;
-            this.endColumn = endColumn;
+            this.Message = message;
+            this.Line = line;
+            this._startColumn = startColumn;
+            this._endColumn = endColumn;
         }
 
-        public bool isValid()
+        public bool IsValid()
         {
-            return level != Level.ERROR;
+            return level != Level.Error;
         }
 
-        public String getIncludeName()
+        public String GetIncludeName()
         {
-            if (contextPath != null && contextPath.size() > 1)
+            if (_contextPath != null && _contextPath.Size() > 1)
             {
-                return contextPath.peek().IncludeName;
+                return _contextPath.Peek().IncludeName;
             }
             return null;
         }
 
-        public ContextPath getIncludeContext()
+        public ContextPath GetIncludeContext()
         {
-            return contextPath;
+            return _contextPath;
         }
 
-        public void setIncludeContext(ContextPath contextPath)
+        public void SetIncludeContext(ContextPath contextPath)
         {
-            this.contextPath = new ContextPath(contextPath);
+            this._contextPath = new ContextPath(contextPath);
             //if (extraIncludeInfo != null)
             //{
             //    this.contextPath.push(extraIncludeInfo);
@@ -78,17 +78,17 @@ namespace Raml.Parser.Raml.Parser.Rule
             //}
         }
 
-        public void setExtraIncludeInfo(IncludeInfo extraIncludeInfo)
+        public void SetExtraIncludeInfo(IncludeInfo extraIncludeInfo)
         {
-            this.extraIncludeInfo = extraIncludeInfo;
+            this._extraIncludeInfo = extraIncludeInfo;
         }
 
-        public static bool areValid(List<ValidationResult> validationResults)
+        public static bool AreValid(List<ValidationResult> validationResults)
         {
-            return validationResults.All(result => result.isValid());
+            return validationResults.All(result => result.IsValid());
         }
 
-        public static List<ValidationResult> getLevel(Level level, List<ValidationResult> results)
+        public static List<ValidationResult> GetLevel(Level level, List<ValidationResult> results)
         {
             return results.Where(result => result.level == level).ToList();
         }
@@ -99,13 +99,13 @@ namespace Raml.Parser.Raml.Parser.Rule
         {
             return "ValidationResult{" +
                    "level=" + level +
-                   ", message='" + message + '\'' +
+                   ", message='" + Message + '\'' +
                    '}';
         }
 
         public static ValidationResult createErrorResult(String message, int line, int startIndex, int endIndex)
         {
-            return new ValidationResult(Level.ERROR, message, line, startIndex, endIndex);
+            return new ValidationResult(Level.Error, message, line, startIndex, endIndex);
         }
 
         //public static ValidationResult createErrorResult(String message, Mark startMark, Mark endMark)
@@ -123,7 +123,7 @@ namespace Raml.Parser.Raml.Parser.Rule
 
         public static ValidationResult createErrorResult(String message)
         {
-            return createErrorResult(message, UNKNOWN, UNKNOWN, UNKNOWN);
+            return createErrorResult(message, Unknown, Unknown, Unknown);
         }
 
         //public static ValidationResult createWarnResult(String message, Node node)
@@ -132,9 +132,9 @@ namespace Raml.Parser.Raml.Parser.Rule
         //        node.getStartMark().getColumn(), node.getEndMark().getColumn());
         //}
 
-        public static ValidationResult create(Level level, String message)
+        public static ValidationResult Create(Level level, String message)
         {
-            return new ValidationResult(level, message, UNKNOWN, UNKNOWN, UNKNOWN);
+            return new ValidationResult(level, message, Unknown, Unknown, Unknown);
         }
     }
 }

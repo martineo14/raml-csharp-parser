@@ -25,16 +25,16 @@ namespace raml_parser.raml.emitter
 {
     public class RamlEmitter
     {
-    public static readonly String VERSION = "#%RAML 0.8";
-    private static readonly String INDENTATION = "    ";
-    private static readonly String YAML_SEQ = "- ";
-    private static readonly String YAML_SEQ_START = "[";
-    private static readonly String YAML_SEQ_END = "]";
-    private static readonly String YAML_SEQ_SEP = ", ";
-    private static readonly String YAML_MAP_SEP = ": ";
+    public static readonly String Version = "#%RAML 0.8";
+    private static readonly String Indentation = "    ";
+    private static readonly String YamlSeq = "- ";
+    private static readonly String YamlSeqStart = "[";
+    private static readonly String YamlSeqEnd = "]";
+    private static readonly String YamlSeqSep = ", ";
+    private static readonly String YamlMapSep = ": ";
 
-    private static readonly Regex NO_QUOTES = new Regex(@"^[a-zA-Z_/+][^:]*$");
-    private static readonly string[] LITERALS = {"yes", "no", "true", "false", "on", "off", "null"};
+    private static readonly Regex NoQuotes = new Regex(@"^[a-zA-Z_/+][^:]*$");
+    private static readonly string[] Literals = {"yes", "no", "true", "false", "on", "off", "null"};
 
     //public string dump(Raml.Parser.Raml.Model.Raml raml)
     //{
